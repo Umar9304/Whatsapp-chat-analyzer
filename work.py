@@ -91,8 +91,11 @@ def emoji_get(selected_user, df):
     for i in df['message']:
         emojis.extend([x for x in i if emoji.is_emoji(x)])
 
-    emoji_df = pd.DataFrame(Counter(emojis).most_common(len(emojis)))
-    emoji_df.columns = ['emoji', 'count']
+    if emojis:
+        emoji_df = pd.DataFrame(Counter(emojis).most_common())
+        emoji_df.columns = ['emoji', 'count']
+    else:
+        emoji_df = pd.DataFrame(columns=['emoji', 'count'])
     return emoji_df
 
 
