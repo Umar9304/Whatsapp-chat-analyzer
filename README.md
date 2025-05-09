@@ -19,8 +19,8 @@ Tools & Technologies Used:
   - URLExtract: To extract URLs from the chat messages.
   - Emoji: For detecting and analyzing emojis in the messages.
 
-NOTE: the regular expresion used in my code is for txt formate:
- - day/month/year(last 2 digit), hour(12):minute (AM/PM) - User name: message
+# NOTE: the regular expresion used in my code is for txt formate:
+# - day/month/year(last 2 digit), hour(12):minute (AM/PM) - User name: message
  - change the regular expresions based on your txt data
  - here is one for 24 hr formate :
    - pattern = '\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d(2)\s-\s' #Change in preprocessing.py line 6
